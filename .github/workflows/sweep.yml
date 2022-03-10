@@ -1,4 +1,5 @@
-name: Discord Bot
+name: sweep
+
 on:
   push:
     branches: [ master ]

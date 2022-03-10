@@ -1,4 +1,5 @@
-name: Discord Bot
+name: main.py
+
 on:
   push:
   schedule:
