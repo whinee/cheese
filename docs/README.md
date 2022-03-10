@@ -34,8 +34,6 @@
 
 Github: [github.com/whinee/cheese](https://github.com/whinee/cheese)
 
----
-
 ## **Important**
 
 I do not know what this is, but this works, and I need this to run oof github workflows.
