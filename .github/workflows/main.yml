@@ -1,0 +1,26 @@
+name: Discord Bot
+on:
+  push:
+    branches: [ master ]
+  schedule:
+    - cron: "0 */4 * * *"
+
+concurrency: 
+  group: "cheese"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.10'
+      - run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+      - run: |
+          python cheese/main.py
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
